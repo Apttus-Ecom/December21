@@ -15,7 +15,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">Conga Digital Commerce Winter &#x27;21</a>
+                    <a href="index.html" data-type="index-link">Conga Digital Commerce December &#x27;21</a>
                 </li>
 
                 <li class="divider"></li>
@@ -49,16 +49,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="additional-pages"' : 'id="xs-additional-pages"' }>
                                     <li class="link ">
-                                        <a href="additional-documentation/upgrading-the-digital-commerce-template-from-summer-&#x27;20-to-spring-&#x27;21.html" data-type="entity-link" data-context-id="additional">Upgrading the Digital Commerce Template from Summer &#x27;20 to Spring &#x27;21</a>
+                                        <a href="additional-documentation/upgrading-the-digital-commerce-template-from-spring-&#x27;21-to-december-&#x27;21.html" data-type="entity-link" data-context-id="additional">Upgrading the Digital Commerce Template from Spring &#x27;21 to December &#x27;21</a>
                                     </li>
                                     <li class="link ">
-                                        <a href="additional-documentation/upgrading-the-partner-commerce-template-from-summer-&#x27;20-to-spring-&#x27;21.html" data-type="entity-link" data-context-id="additional">Upgrading the Partner Commerce Template from Summer &#x27;20 to Spring &#x27;21</a>
-                                    </li>
-                                    <li class="link ">
-                                        <a href="additional-documentation/upgrading-the-digital-commerce-template-from-winter-&#x27;20-to-spring-&#x27;21.html" data-type="entity-link" data-context-id="additional">Upgrading the Digital Commerce Template from Winter &#x27;20 to Spring &#x27;21</a>
-                                    </li>
-                                    <li class="link ">
-                                        <a href="additional-documentation/upgrading-the-partner-commerce-template-from-winter-&#x27;20-to-spring-&#x27;21.html" data-type="entity-link" data-context-id="additional">Upgrading the Partner Commerce Template from Winter &#x27;20 to Spring &#x27;21</a>
+                                        <a href="additional-documentation/upgrading-the-partner-commerce-template-from-spring-&#x27;21-to-december-&#x27;21.html" data-type="entity-link" data-context-id="additional">Upgrading the Partner Commerce Template from Spring &#x27;21 to December &#x27;21</a>
                                     </li>
                         </ul>
                     </li>
@@ -134,6 +128,20 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/AssetModule.html" data-type="entity-link" >AssetModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-AssetModule-c9487f36b105cc118ae1199e81a78dc6"' : 'data-target="#xs-components-links-module-AssetModule-c9487f36b105cc118ae1199e81a78dc6"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AssetModule-c9487f36b105cc118ae1199e81a78dc6"' :
+                                            'id="xs-components-links-module-AssetModule-c9487f36b105cc118ae1199e81a78dc6"' }>
+                                            <li class="link">
+                                                <a href="components/AssetListComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AssetListComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/AssetsModule.html" data-type="entity-link" >AssetsModule</a>

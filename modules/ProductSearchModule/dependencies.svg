@@ -18,13 +18,13 @@
 <title>cluster_ProductSearchModule_declarations</title>
 <polygon fill="none" stroke="black" points="158,-40.8 158,-92.8 336,-92.8 336,-40.8 158,-40.8"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_ProductSearchModule_exports</title>
-<polygon fill="none" stroke="black" points="85,-170.8 85,-222.8 267,-222.8 267,-170.8 85,-170.8"/>
-</g>
 <g id="clust4" class="cluster">
 <title>cluster_ProductSearchModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-40.8 16,-92.8 150,-92.8 150,-40.8 16,-40.8"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_ProductSearchModule_exports</title>
+<polygon fill="none" stroke="black" points="85,-170.8 85,-222.8 267,-222.8 267,-170.8 85,-170.8"/>
 </g>
 <!-- ProductSearchComponent -->
 <g id="node1" class="node">
