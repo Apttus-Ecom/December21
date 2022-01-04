@@ -149,7 +149,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p> send email notification for new order to the guest user</p>
+                    <div class="io-description"><p>Send email notification for new order to the guest user</p>
 </div>
 
                     <div class="io-description">
@@ -161,6 +161,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -175,6 +176,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>generated order Id.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>orderURL</td>
@@ -187,6 +192,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>order URL.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -227,6 +236,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Send email notification on change status of the order</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -237,6 +248,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -251,6 +263,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>name of the template to be used.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>orderId</td>
@@ -263,6 +279,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>generated order Id</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>recipentId</td>
@@ -275,6 +295,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>which contact from the account to be used.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>toAddresses</td>
@@ -287,6 +311,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>which Addresses to be used to send email.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>ccAddresses</td>
@@ -299,6 +327,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>optional which Addresses to be used in cc to send email.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>attachmentIds</td>
@@ -311,6 +343,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>list of attachment Id</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -322,7 +358,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable</p>
+
                     </div>
                 </td>
             </tr>

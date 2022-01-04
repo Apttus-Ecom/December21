@@ -165,6 +165,7 @@
                                     <td>Type</td>
                                     <td>Optional</td>
                                     <td>Default value</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -181,6 +182,10 @@
                                     <td>
                                     </td>
 
+                                    <td>
+                                        <p>array of records to be deleted</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>updateCache</td>
@@ -196,6 +201,10 @@
                                         <code>true</code>
                                     </td>
 
+                                    <td>
+                                        <p>when set to true, will update cache after deleting records</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -207,7 +216,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an array of records that were deleted in the process</p>
+
                     </div>
                 </td>
             </tr>
@@ -246,7 +256,7 @@ accountLocationList$: Observable&lt;Array&lt;AccountLocation&gt;&gt;;
 
 constructor(private accountLocationService: AccountLocationService){}
 
-getProductOptions(productCode: string){
+getAccountLocations(productCode: string){
 this.accountLocationService.getAccountLocations().subscribe(a =&gt; this.accountLocationList = a);
 // or
 this.accountLocationList$ + this.accountLocationService.getAccountLocations();

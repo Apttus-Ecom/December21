@@ -130,13 +130,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#addCartItems" >addCartItems</a>
-                            </li>
-                            <li>
                                 <a href="#getBundleItemsForCartItem" >getBundleItemsForCartItem</a>
-                            </li>
-                            <li>
-                                <a href="#getCartItem" >getCartItem</a>
                             </li>
                             <li>
                                 <a href="#getCartItemsForAsset" >getCartItemsForAsset</a>
@@ -149,12 +143,6 @@
                             </li>
                             <li>
                                 <a href="#getEndDate" >getEndDate</a>
-                            </li>
-                            <li>
-                                <a href="#getNextPrimaryLineNumber" >getNextPrimaryLineNumber</a>
-                            </li>
-                            <li>
-                                <a href="#getReadableTerm" >getReadableTerm</a>
                             </li>
                             <li>
                                 <a href="#getTerm" >getTerm</a>
@@ -184,69 +172,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="addCartItems"></a>
-                    <span class="name">
-                        <span ><b>addCartItems</b></span>
-                        <a href="#addCartItems"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>addCartItems(cartItems: Array<CartItem>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItems</td>
-                                    <td>
-                                            <code>Array&lt;CartItem&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;Array&lt;CartItem&gt;&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -281,6 +206,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -295,6 +221,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Instance of the cart, asset, quote or order line item passed.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>context</td>
@@ -307,6 +237,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>An optional context object to avoid additional network callouts</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -318,71 +252,8 @@
 
                     </div>
                     <div class="io-description">
-                        <p>An observable containing the array of option line items for a given cart item.</p>
+                        <p>An observable containing the array of option line items for a given cart, asset, quote or order line item.</p>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getCartItem"></a>
-                    <span class="name">
-                        <span ><b>getCartItem</b></span>
-                        <a href="#getCartItem"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getCartItem(cartItemId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItemId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -466,7 +337,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an Obseravable containing the array of CartItem associated with cart</p>
+
                     </div>
                 </td>
             </tr>
@@ -739,6 +611,8 @@
                                     </td>
 
                                     <td>
+                                        <p>the default line status to use.</p>
+
                                     </td>
                                 </tr>
                             </tbody>
@@ -751,7 +625,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an Obseravable containing the array of CartItem associated with Product</p>
+
                     </div>
                 </td>
             </tr>
@@ -853,156 +728,6 @@
                     <div class="io-description">
                         <p>a date value representing the day of end of service of the product.</p>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getNextPrimaryLineNumber"></a>
-                    <span class="name">
-                        <span ><b>getNextPrimaryLineNumber</b></span>
-                        <a href="#getNextPrimaryLineNumber"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getNextPrimaryLineNumber(cartItems: Array<CartItem>, cart: <a href="../classes/Cart.html" target="_self">Cart</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cartItems</td>
-                                    <td>
-                                            <code>Array&lt;CartItem&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>cart</td>
-                                    <td>
-                                                <code><a href="../classes/Cart.html" target="_self" >Cart</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getReadableTerm"></a>
-                    <span class="name">
-                        <span ><b>getReadableTerm</b></span>
-                        <a href="#getReadableTerm"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getReadableTerm(term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, frequency: "Hourly" | "Daily" | "Weekly" | "Monthly" | "Quarterly" | "Half Yearly" | "Yearly" | "One Time" | "--None--")</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>term</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>frequency</td>
-                                    <td>
-                                            <code>&quot;Hourly&quot; | &quot;Daily&quot; | &quot;Weekly&quot; | &quot;Monthly&quot; | &quot;Quarterly&quot; | &quot;Half Yearly&quot; | &quot;Yearly&quot; | &quot;One Time&quot; | &quot;--None--&quot;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>

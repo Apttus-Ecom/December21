@@ -136,9 +136,6 @@
                                 <a href="#getMyQuotes" >getMyQuotes</a>
                             </li>
                             <li>
-                                <a href="#getQuote" >getQuote</a>
-                            </li>
-                            <li>
                                 <a href="#getQuoteByName" >getQuoteByName</a>
                             </li>
                             <li>
@@ -658,11 +655,30 @@ this.quoteService.generateDocument(generateDocumentRequest: GenerateDocument).su
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Get the aggregate of quote total by approval stage</p>
-</div>
+                    <div class="io-description"><p>Method to get the aggregate of quote total by approval stage</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { QuoteService, GenerateDocument } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
 
+export class MyComponent implements OnInit{
+result: string;
+
+constructor(private quoteService: QuoteService){}
+
+getGrandTotalByApprovalStage(){
+this.quoteService.getGrandTotalByApprovalStage().subscribe(r =&gt; r);
+}
+}
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Observable&lt;object&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Aggregate of quote total object based on the Approval Stage.</p>
 
                     </div>
                 </td>
@@ -827,69 +843,6 @@ this.quoteList$ = this.quoteService.getMyQuotes();
                     <div class="io-description">
                         <p>a an observable array of quote instances for the current user</p>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getQuote"></a>
-                    <span class="name">
-                        <span ><b>getQuote</b></span>
-                        <a href="#getQuote"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getQuote(Id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Id</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Quote.html" target="_self" >Observable&lt;Quote&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>

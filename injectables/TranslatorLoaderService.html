@@ -223,7 +223,6 @@ It also provides support for language translation of labels based on the salesfo
                     <div class="io-description"><p>Retrieves translated labels based on current language and by configuring storefront Translation URL value.</p>
 <h3 id="example">Example:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">import { TranslatorLoaderService } from &#39;&#64;congacommerce/ecommerce&#39;;
-
 &#64;NgModule({
 declarations: [
 AppComponent
@@ -297,7 +296,7 @@ export class AppModule { }</code></pre></div></div>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>translateData(recordList: Array<AObject>)</code>
+<code>translateData(recordList: Array<AObject>, categories: <a href="../classes/Category.html" target="_self">Array&lt;Category&gt;</a>)</code>
                 </td>
             </tr>
 
@@ -306,10 +305,8 @@ export class AppModule { }</code></pre></div></div>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>TODO:
-This method shouldn&#39;t be setting the translation field on the product record. Instead, the translation record should be passed as an argument
-to the translateRecord method. Additionally, this method should be smarter. Allow the user to pass in any arbitrary array of records, recusrively
-search the records for instances of Product or Category or ProductAttributeGroup and translate those records if the data exists.</p>
+                    <div class="io-description"><p>Method provides locale data translation for categories, products and product attribute groups based on the salesforce translation object.
+Also translates product data, with data translations for underlying attribute groups, option groups and product option components for complex bundles.</p>
 </div>
 
                     <div class="io-description">
@@ -321,6 +318,7 @@ search the records for instances of Product or Category or ProductAttributeGroup
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Default value</td>
                                     <td>Description</td>
                                 </tr>
                             </thead>
@@ -335,9 +333,30 @@ search the records for instances of Product or Category or ProductAttributeGroup
                                         No
                                     </td>
 
+                                    <td>
+                                    </td>
 
                                     <td>
                                         <p>An array of Category, Product or Product Attribute Group data to be translated.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>categories</td>
+                                    <td>
+                                                <code><a href="../classes/Category.html" target="_self" >Array&lt;Category&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Category list to translate option groups for a bundle.</p>
 
                                     </td>
                                 </tr>
@@ -351,7 +370,7 @@ search the records for instances of Product or Category or ProductAttributeGroup
 
                     </div>
                     <div class="io-description">
-                        <p>an observable containing an array of Categories, Products or Product Attribute Groups.</p>
+                        <p>an observable containing an array of translated Categories, Products or Product Attribute Groups.</p>
 
                     </div>
                 </td>

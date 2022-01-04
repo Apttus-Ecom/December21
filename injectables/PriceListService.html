@@ -88,9 +88,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#accountService" >accountService</a>
-                            </li>
-                            <li>
                                 <a href="#apiService" >apiService</a>
                             </li>
                             <li>
@@ -128,6 +125,9 @@
                             </li>
                             <li>
                                 <a href="#onInit" >onInit</a>
+                            </li>
+                            <li>
+                                <a href="#refreshPriceList" >refreshPriceList</a>
                             </li>
                         </ul>
                     </td>
@@ -179,7 +179,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>a hot observable containing the effective price list instance</p>
+                        <p>a hot observable containing the effective price list instance.</p>
 
                     </div>
                 </td>
@@ -218,7 +218,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>a hot string observable containing the current effective price list id</p>
+                        <p>a hot string observable containing the current effective price list id.</p>
 
                     </div>
                 </td>
@@ -247,7 +247,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Method returns the entire price list instance of the currently selected price list</p>
+                    <div class="io-description"><p>Method returns the entire price list instance of the currently selected price list.</p>
 </div>
 
                     <div>
@@ -257,7 +257,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>a hot observable containing the price list instance</p>
+                        <p>a hot observable containing the price list instance.</p>
 
                     </div>
                 </td>
@@ -296,7 +296,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>a hot string observable containing the current price list id</p>
+                        <p>a hot string observable containing the current price list id.</p>
 
                     </div>
                 </td>
@@ -334,32 +334,45 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshPriceList"></a>
+                    <span class="name">
+                        <span ><b>refreshPriceList</b></span>
+                        <a href="#refreshPriceList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshPriceList()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method is responsible for fetching active price list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
             <section>
     
     <h3 id="inputs">
         Properties
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="accountService"></a>
-                    <span class="name">
-                        <span ><b>accountService</b></span>
-                        <a href="#accountService"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>this.injector.get(AccountService)</code>
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>

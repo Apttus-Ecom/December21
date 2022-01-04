@@ -116,9 +116,6 @@ There are also pipes provided that wrap this service to provide pricing within a
                                 <a href="#adjustValue" >adjustValue</a>
                             </li>
                             <li>
-                                <a href="#getAssetLineItemPrice" >getAssetLineItemPrice</a>
-                            </li>
-                            <li>
                                 <a href="#getAttributePriceForProduct" >getAttributePriceForProduct</a>
                             </li>
                             <li>
@@ -144,9 +141,6 @@ There are also pipes provided that wrap this service to provide pricing within a
                             </li>
                             <li>
                                 <a href="#getQuotePrice" >getQuotePrice</a>
-                            </li>
-                            <li>
-                                <a href="#getRollupItemPrice" >getRollupItemPrice</a>
                             </li>
                         </ul>
                     </td>
@@ -402,75 +396,6 @@ There are also pipes provided that wrap this service to provide pricing within a
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getAssetLineItemPrice"></a>
-                    <span class="name">
-                        <span ><b>getAssetLineItemPrice</b></span>
-                        <a href="#getAssetLineItemPrice"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getAssetLineItemPrice(assetLineItem: <a href="../classes/AssetLineItem.html" target="_self">AssetLineItem</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                    <td>Description</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>assetLineItem</td>
-                                    <td>
-                                                <code><a href="../classes/AssetLineItem.html" target="_self" >AssetLineItem</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                    <td>
-                                        <p>the instance of the asset line item to return the price for</p>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Price.html" target="_self" >Observable&lt;Price&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        <p>a hot observable containing the price of the asset line item</p>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="getAttributePriceForProduct"></a>
                     <span class="name">
                         <span ><b>getAttributePriceForProduct</b></span>
@@ -664,6 +589,7 @@ There are also pipes provided that wrap this service to provide pricing within a
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method returns a price instance for a given cart item. If the price for the item has already been calculated, it will not do client side calculation.</p>
+<p>Line items can be from a cart, an asset, an order or a quote.</p>
 </div>
 
                     <div class="io-description">
@@ -675,6 +601,7 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -689,6 +616,11 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
 
+                                    <td>
+                                        <p>list of line items to return a price for.
+Line items can be from a cart, an asset, an order or a quote.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>options</td>
@@ -701,6 +633,8 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
 
+                                    <td>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -712,7 +646,7 @@ There are also pipes provided that wrap this service to provide pricing within a
 
                     </div>
                     <div class="io-description">
-                        <p>A hot observable containing the price of the given cart item.</p>
+                        <p>A hot observable containing the price of the given item.</p>
 
                     </div>
                 </td>
@@ -1002,7 +936,7 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
                                     <td>
-                                        <p>the instance of the product to return the price for</p>
+                                        <p>the instance of the product to return the price for.</p>
 
                                     </td>
                                 </tr>
@@ -1021,7 +955,7 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
                                     <td>
-                                        <p>the number of product items to calculate</p>
+                                        <p>the number of product items to calculate.</p>
 
                                     </td>
                                 </tr>
@@ -1040,6 +974,8 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
                                     <td>
+                                        <p>an integer value representing the selling term, defaulted to 1.</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -1056,6 +992,8 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
                                     <td>
+                                        <p>an optional parameter representing the product attribute value.</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -1073,6 +1011,8 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
                                     <td>
+                                        <p>flag indicates if the product is a bundle with option groups and product option components.</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -1089,6 +1029,8 @@ There are also pipes provided that wrap this service to provide pricing within a
                                     </td>
 
                                     <td>
+                                        <p>an optional parameter representing the charge type to calculate the price for.</p>
+
                                     </td>
                                 </tr>
                             </tbody>
@@ -1101,7 +1043,7 @@ There are also pipes provided that wrap this service to provide pricing within a
 
                     </div>
                     <div class="io-description">
-                        <p>a hot observable containing the price instance for the given product</p>
+                        <p>a hot observable containing the price instance for the given product.</p>
 
                     </div>
                 </td>
@@ -1240,69 +1182,6 @@ There are also pipes provided that wrap this service to provide pricing within a
                     <div class="io-description">
                         <p>a hot observable containing the price of the Quote</p>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getRollupItemPrice"></a>
-                    <span class="name">
-                        <span ><b>getRollupItemPrice</b></span>
-                        <a href="#getRollupItemPrice"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getRollupItemPrice(item: CartItem | AssetLineItem | QuoteLineItem | OrderLineItem)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>item</td>
-                                    <td>
-                                            <code>CartItem | AssetLineItem | QuoteLineItem | OrderLineItem</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Price.html" target="_self" >Observable&lt;Price&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>

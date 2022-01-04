@@ -244,21 +244,21 @@ this.productAttributeList$ = this.productAttributeService.getAttributeGroupIdsFo
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Method returns an array of product attribute forms with default attribute values for a given list of products.</p>
+                    <div class="io-description"><p>Method returns ProductAttributeValue with default attribute values for a given list of ProductAttributes.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttribute, Product } from &#39;&#64;congacommerce/ecommerce&#39;;
-import { Observable } from &#39;rxjs/Observable&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { ProductAttributeService, ProductAttributeValue } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable, of } from &#39;rxjs/Observable&#39;;
 
 export class MyComponent implements OnInit{
-attributeFormList: Array&lt;ProductAttributeForm&gt;;
-attributeFormList$: Observable&lt;Array&lt;ProductAttributeForm&gt;&gt;;
+pav: ProductAttributeValue;
+pav$: Observable&lt;ProductAttributeValue&gt;;
 
 constructor(private productAttributeService: ProductAttributeService){}
 
-getAttributesForProduct(product: Product){
-this.productAttributeService.getProductAttributeDefaults(productList).subscribe(attributeForms =&gt; this.attributeFormList = attributeForms);
+getAttributeValueDefaults(product: Product){
+this.productAttributeService.getAttributeValueDefaults(attributeList).subscribe(result =&gt; this.pav$ = result);
 // or
-this.attributeFormList$ = this.productAttributeService.getProductAttributeDefaults(productList);
+this.pav$$ = of(this.productAttributeService.getAttributeValueDefaults(attributeList));
 }
 }</code></pre></div></div>
 
@@ -271,6 +271,7 @@ this.attributeFormList$ = this.productAttributeService.getProductAttributeDefaul
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -285,6 +286,10 @@ this.attributeFormList$ = this.productAttributeService.getProductAttributeDefaul
                                     </td>
 
 
+                                    <td>
+                                        <p>accepts an array of ProductAttributes.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -296,7 +301,7 @@ this.attributeFormList$ = this.productAttributeService.getProductAttributeDefaul
 
                     </div>
                     <div class="io-description">
-                        <p>An array of product attribute forms in an observable.</p>
+                        <p>object of instance of an ProductAttributeValue.</p>
 
                     </div>
                 </td>
@@ -336,7 +341,7 @@ productAttributeList$: Observable&lt;Array&lt;ProductAttribute&gt;&gt;;
 
 constructor(private productAttributeService: ProductAttributeService){}
 
-getAttributesForProduct(product: Product){
+getProductAttributes(product: Product){
 this.productAttributeService.getProductAttributes(product).subscribe(attributeList =&gt; this.productAttributeList = attributeList);
 // or
 this.productAttributeList$ = this.productAttributeService.getProductAttributes(product);

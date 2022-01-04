@@ -125,12 +125,6 @@
                                 <a href="#getCategoryBranchChildren" >getCategoryBranchChildren</a>
                             </li>
                             <li>
-                                <a href="#getCategoryBranchForProductSync" >getCategoryBranchForProductSync</a>
-                            </li>
-                            <li>
-                                <a href="#getCategoryBranchSync" >getCategoryBranchSync</a>
-                            </li>
-                            <li>
                                 <a href="#getCategoryByName" >getCategoryByName</a>
                             </li>
                         </ul>
@@ -176,13 +170,10 @@
                     <div class="io-description"><p>The  Primary method to get all the categories based on pricelist. This is a hot observable that will be updated when the state of the category changes.</p>
 <h3 id="example">Example:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">import { CategoryService } from &#39;&#64;congacommerce/ecommerce&#39;;
-
 export class MyComponent implements OnInit{
 categories: Array&lt;Category&gt;;
 categories$: Observable&lt;Category&gt;; // can be used in the template with {{(categories$ | async) as categories}}
-
 constructor(private categoryService: CategoryService){}
-
 ngOnInit(){
 this.categoryService.getCategories().subscribe(result =&gt; this.categories = category);
 // or
@@ -271,147 +262,6 @@ this.cart$ = this.categoryService.getCategories();
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getCategoryBranchForProductSync"></a>
-                    <span class="name">
-                        <span ><b>getCategoryBranchForProductSync</b></span>
-                        <a href="#getCategoryBranchForProductSync"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getCategoryBranchForProductSync(product)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Delay(1)<br /></code>
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>product</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Array&lt;Category&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getCategoryBranchSync"></a>
-                    <span class="name">
-                        <span ><b>getCategoryBranchSync</b></span>
-                        <a href="#getCategoryBranchSync"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getCategoryBranchSync(categoryId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, categoryList: <a href="../classes/Category.html" target="_self">Array&lt;Category&gt;</a>)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>categoryId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>categoryList</td>
-                                    <td>
-                                                <code><a href="../classes/Category.html" target="_self" >Array&lt;Category&gt;</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../classes/Category.html" target="_self" >Array&lt;Category&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="getCategoryByName"></a>
                     <span class="name">
                         <span ><b>getCategoryByName</b></span>
@@ -433,13 +283,10 @@ this.cart$ = this.categoryService.getCategories();
                     <div class="io-description"><p>The  method to get the Category By Name. This is a hot observable that will be updated when the state of the category changes.</p>
 <h3 id="example">Example:</h3>
 <div><pre class="line-numbers"><code class="language-typescript">import { CategoryService } from &#39;&#64;congacommerce/ecommerce&#39;;
-
 export class MyComponent implements OnInit{
 category: Category;
 category$: Observable&lt;Category&gt;; // can be used in the template with {{(category$ | async)?.Label}}
-
 constructor(private categoryService: CategoryService){}
-
 ngOnInit(){
 this.categoryService.getCategoryByName(&#39;Electronics&#39;).subscribe(category =&gt; this.category = category);
 // or

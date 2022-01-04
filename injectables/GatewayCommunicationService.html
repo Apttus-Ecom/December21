@@ -63,7 +63,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>The gateway communication object store payment request/response payload for each transaction.</p>
+                <p>The gateway communication object stores payment request/response payload for each transaction.</p>
 
             </p>
 
@@ -163,7 +163,9 @@ ngOnInit(){
 this.gatewayCommunicationService.getResponseUpdate(this.gatewayCommunication.GatewayTransactiontId).subscribe(response =&gt; {
 });
 }
-}</code></pre></div></div>
+}</code></pre></div><p>/**
+This method retrieves the gateway communication record for a given transaction id.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -199,7 +201,7 @@ this.gatewayCommunicationService.getResponseUpdate(this.gatewayCommunication.Gat
 
                     </div>
                     <div class="io-description">
-                        <p>an Observable containing the gateway communication if response received otherwise null</p>
+                        <p>an observable containing the gateway communication response.</p>
 
                     </div>
                 </td>

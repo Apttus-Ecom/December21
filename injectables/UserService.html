@@ -270,9 +270,30 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method gets active user</p>
+<h3 id="example">Example:</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { UserService, User } from &#39;&#64;congacommerce/ecommerce&#39;;
+import { Observable } from &#39;rxjs/Observable&#39;;
 
+export class MyComponent implements OnInit{
+user: User;
+user$: Observable&lt;User&gt;
+constructor(private userService: UserService){}
+
+this.userService.getCurrentUser().subscribe(user =&gt; this.user = user);
+// or
+this.user$ = this.userService.getCurrentUser();
+
+}</code></pre></div></div>
+
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Observable&lt;User&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>active user</p>
 
                     </div>
                 </td>
@@ -735,7 +756,8 @@ Will associate an account and a profile with the user record based on the commun
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable of the register user</p>
+
                     </div>
                 </td>
             </tr>
@@ -805,7 +827,8 @@ Will associate an account and a profile with the user record based on the commun
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable of type user</p>
+
                     </div>
                 </td>
             </tr>
@@ -967,7 +990,8 @@ Will associate an account and a profile with the user record based on the commun
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>current user with currency</p>
+
                     </div>
                 </td>
             </tr>
@@ -1026,6 +1050,8 @@ Will associate an account and a profile with the user record based on the commun
                                     </td>
 
                                     <td>
+                                        <p>locale to set on current user</p>
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -1128,7 +1154,8 @@ Will associate an account and a profile with the user record based on the commun
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable of the current user</p>
+
                     </div>
                 </td>
             </tr>
@@ -1226,6 +1253,8 @@ Will associate an account and a profile with the user record based on the commun
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method sets the defaults like language, locale &amp; email encoding type for user</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -1236,6 +1265,7 @@ Will associate an account and a profile with the user record based on the commun
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1250,6 +1280,10 @@ Will associate an account and a profile with the user record based on the commun
                                     </td>
 
 
+                                    <td>
+                                        <p>the user record to set the defaults on</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

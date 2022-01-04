@@ -59,6 +59,14 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Product configuration are a complex feature when configuring products with option groups and attribute groups based
+on business logic.</p>
+
+            </p>
 
 
 
@@ -97,16 +105,10 @@
                                 <a href="#changeProductQuantity" >changeProductQuantity</a>
                             </li>
                             <li>
-                                <a href="#getConfigState" >getConfigState</a>
-                            </li>
-                            <li>
                                 <a href="#getPrimaryItem" >getPrimaryItem</a>
                             </li>
                             <li>
                                 <a href="#onChangeConfiguration" >onChangeConfiguration</a>
-                            </li>
-                            <li>
-                                <a href="#setConfigState" >setConfigState</a>
                             </li>
                         </ul>
                     </td>
@@ -191,6 +193,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>This method will accepts and stores the quantity of the Primary product in its local state.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -201,6 +205,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -215,6 +220,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>is of type number.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -227,37 +236,6 @@
                     </div>
                     <div class="io-description">
                         
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getConfigState"></a>
-                    <span class="name">
-                        <span ><b>getConfigState</b></span>
-                        <a href="#getConfigState"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getConfigState()</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>BehaviorSubject&lt;BundleState&gt;</code>
-
                     </div>
                 </td>
             </tr>
@@ -285,6 +263,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method responsible for fetching the primary lineitem of the product.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -295,6 +275,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -309,6 +290,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>requires instance of product object.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -320,7 +305,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an instance of cartItem object.</p>
+
                     </div>
                 </td>
             </tr>
@@ -348,6 +334,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method responsible to emit the latest configuration State.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -358,6 +346,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -372,69 +361,10 @@
                                     </td>
 
 
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="setConfigState"></a>
-                    <span class="name">
-                        <span ><b>setConfigState</b></span>
-                        <a href="#setConfigState"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>setConfigState(record: BundleState)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>record</td>
                                     <td>
-                                            <code>BundleState</code>
+                                        <p>accepts the info about the current configuration state in product detail page.</p>
+
                                     </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
                                 </tr>
                             </tbody>
                         </table>
@@ -514,6 +444,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>stores the quantity of the primary product</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>

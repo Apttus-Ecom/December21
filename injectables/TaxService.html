@@ -225,7 +225,7 @@ this.taxService.getTaxBreakupForLineItem(lineItemId).subscribe(taxResults =&gt; 
 
 
                                     <td>
-                                        <p>Line item id for which you want to retrieve tax breakups</p>
+                                        <p>string identifier of the line item to retrieve tax breakups for.</p>
 
                                     </td>
                                 </tr>
@@ -239,7 +239,8 @@ this.taxService.getTaxBreakupForLineItem(lineItemId).subscribe(taxResults =&gt; 
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an observable containing list of tax breakup items for a given line item.</p>
+
                     </div>
                 </td>
             </tr>
@@ -282,8 +283,14 @@ this.taxService.getTaxBreakUpsForConfiguration().subscribe(taxResults =&gt; {...
 }
 }</code></pre></div></div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="../classes/TaxBreakup.html" target="_self" >Observable&lt;Array&lt;TaxBreakup&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>an observable containing list of tax breakup items for the active cart.</p>
 
                     </div>
                 </td>

@@ -497,7 +497,7 @@ this.assetLineItems$ = this.assetService.getAssetLineItemForAccount(accountId: s
 
                     </div>
                     <div class="io-description">
-                        <p>Observable&lt;Array<AssetLineItem>&gt; returns an observable list of asset line item records</p>
+                        <p>Observable&lt;Array<AssetLineItemExtended>&gt; returns an observable list of asset line item records</p>
 
                     </div>
                 </td>
@@ -592,7 +592,7 @@ this.assetLineItems$ = this.assetService.getAssetLineItemsforProducts(products: 
 
                     </div>
                     <div class="io-description">
-                        <p>Observable&lt;Array<AssetLineItem>&gt; returns an observable list of asset line item records.</p>
+                        <p>Observable&lt;Array<AssetLineItemExtended>&gt; returns an observable list of asset line item records.</p>
 
                     </div>
                 </td>
@@ -850,11 +850,11 @@ this.lineItemMap$ = this.assetService.incrementAssets(incrementAssetDO: Array&lt
                 <td class="col-md-4">
                     <div class="io-description"><p>The primary method to renew the existing assets.</p>
 <h3 id="example">Example:</h3>
-<div><pre class="line-numbers"><code class="language-typescript">import { AssetService } from &#39;&#64;congacommerce/ecommerce&#39;;
+<div><pre class="line-numbers"><code class="language-typescript">import { AssetService, AssetLineItemExtended } from &#39;&#64;congacommerce/ecommerce&#39;;
 
 export class MyComponent implements OnInit{
-lineItemMap: Array&lt;any&gt;;
-lineItemMap$: Observable&lt;Array&lt;any&gt;&gt;;
+lineItemMap: Array&lt;AssetLineItemExtended&gt;;
+lineItemMap$: Observable&lt;Array&lt;AssetLineItemExtended&gt;&gt;;
 
 constructor(private assetService: AssetService){}
 
@@ -948,11 +948,11 @@ this.lineItemMap$ = this.assetService.renewAssets(assetIds: Array&lt;string&gt;,
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+                        <b>Returns : </b>    <code>Observable&lt;AssetLineItemExtended&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        <p>Observable&lt;Array<AssetLineItem>&gt; returns an observable list of all line items with all their field values.</p>
+                        <p>Observable&lt;Array<AssetLineItemExtended>&gt; returns an observable list of all line items with all their field values.</p>
 
                     </div>
                 </td>
