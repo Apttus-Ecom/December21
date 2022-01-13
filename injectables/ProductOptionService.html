@@ -170,6 +170,9 @@
                                 <a href="#getRequiredUncheckedOptions" >getRequiredUncheckedOptions</a>
                             </li>
                             <li>
+                                <a href="#groupOptionGroups" >groupOptionGroups</a>
+                            </li>
+                            <li>
                                 <a href="#fetch" >fetch</a>
                             </li>
                             <li>
@@ -391,7 +394,7 @@ with the group parameter.</p>
                 <td class="col-md-4">
                     <div class="io-description"><p>Method takes a bundle product record and organizes the attributes and options into it&#39;s tree structure. Will filter out any attributes or option groups
 that are empty and associate related cart items with each option
-options are selected. If the applyFilter is &#39;changes&#39; it returns the attributes/options that are changed.</p>
+options are selected. If the applyFilter is &#39;changes&#39; it returns the attributes/options that are changed, required for helper method &#39;groupOptionGroups&#39;.</p>
 </div>
 
                     <div class="io-description">
@@ -460,7 +463,7 @@ options are selected. If the applyFilter is &#39;changes&#39; it returns the att
 
                                     <td>
                                         <p>accepts &#39;none&#39; | &#39;items&#39; | &#39;changes&#39;, By default the value is set as &#39;none&#39;, i.e no filter is applied. If the applyFilter is &#39;items&#39; it returns
-options are selected. If the applyFilter is &#39;changes&#39; it returns the attributes/options that are changed.</p>
+options are selected. If the applyFilter is &#39;changes&#39; it returns the attributes/options that are changed, required for helper method &#39;groupOptionGroups&#39;.</p>
 
                                     </td>
                                 </tr>
@@ -652,6 +655,174 @@ a bundle configuration to the cart.</p>
                     </div>
                     <div class="io-description">
                         <p>an Array of Product option Component.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="groupOptionGroups"></a>
+                    <span class="name">
+                        <span ><b>groupOptionGroups</b></span>
+                        <a href="#groupOptionGroups"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>groupOptionGroups(p: <a href="../classes/Product.html" target="_self">Product</a>, attributeValue: <a href="../classes/ProductAttributeValue.html" target="_self">ProductAttributeValue</a>, relatedItems: Array<CartItem | QuoteLineItem | AssetLineItem | OrderLineItem>, applyFilter: "none" | "items" | "changes", metadata: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, parentItem?: CartItem | QuoteLineItem | AssetLineItem | OrderLineItem)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method is responsible for creating the tree structure by looping through attribute groups and option groups in recursive fashion and generate tree structure keeping the
+primary bundle product as the root.
+options are selected. If the applyFilter is &#39;changes&#39; it returns the attributes/options that are changed.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>p</td>
+                                    <td>
+                                                <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>is an instance of product object.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attributeValue</td>
+                                    <td>
+                                                <code><a href="../classes/ProductAttributeValue.html" target="_self" >ProductAttributeValue</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>is an instance of product attribute value object.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>relatedItems</td>
+                                    <td>
+                                            <code>Array&lt;CartItem | QuoteLineItem | AssetLineItem | OrderLineItem&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>is a list of CartItem | QuoteLineItem | AssetLineItem | OrderLineItem object.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>applyFilter</td>
+                                    <td>
+                                            <code>&quot;none&quot; | &quot;items&quot; | &quot;changes&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&#x27;none&#x27;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>accepts &#39;none&#39; | &#39;items&#39; | &#39;changes&#39;, By default the value is set as &#39;none&#39;, i.e no filter is applied. If the applyFilter is &#39;items&#39; it returns
+options are selected. If the applyFilter is &#39;changes&#39; it returns the attributes/options that are changed.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>metadata</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>is the metadata information of the related object.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>parentItem</td>
+                                    <td>
+                                            <code>CartItem | QuoteLineItem | AssetLineItem | OrderLineItem</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>is an instance of CartItem | QuoteLineItem | AssetLineItem | OrderLineItem object.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Product.html" target="_self" >Product</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>product object.</p>
 
                     </div>
                 </td>
