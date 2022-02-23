@@ -1016,6 +1016,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/PaymentIFrameComponent.html" data-type="entity-link" >PaymentIFrameComponent</a>
                             </li>
                             <li class="link">
+                                <a href="components/PgProductConfigurationComponent.html" data-type="entity-link" >PgProductConfigurationComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/PgSummaryComponent.html" data-type="entity-link" >PgSummaryComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/PresentDocumentComponent.html" data-type="entity-link" >PresentDocumentComponent</a>
                             </li>
                             <li class="link">
